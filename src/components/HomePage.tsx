@@ -9,6 +9,7 @@ interface HomePageProps {
 export function HomePage({ onNavigate }: HomePageProps) {
   const handleGoogleLogin = () => {
     const apiBase = import.meta.env.VITE_API_URL || "http://localhost:5000";
+    console.log("apiBase", apiBase);
     window.location.href = `${apiBase}/api/auth/google`;
   };
 
