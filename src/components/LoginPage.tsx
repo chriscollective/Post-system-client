@@ -40,7 +40,8 @@ export function LoginPage({ onNavigate, onLogin }: LoginPageProps) {
   };
 
   const handleGoogleLogin = () => {
-    window.location.href = "/api/auth/google";
+    const apiBase = import.meta.env.VITE_API_URL || "http://localhost:5000";
+    window.location.href = `${apiBase}/api/auth/google`;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
